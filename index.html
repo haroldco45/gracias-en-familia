@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gracias en Familia · Día de Acción de Gracias 2026 | Vibras Positivas HM</title>
+<meta name="description" content="Día de Acción de Gracias 2026: historia, costumbres, menú a la colombiana, muro de gratitud, tarjetas y frases para compartir en familia. En español e inglés.">
+<meta name="theme-color" content="#7a2e12">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+
+<!-- Vista previa al compartir el enlace -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vibras Positivas HM">
+<meta property="og:title" content="Gracias en Familia · Día de Acción de Gracias 2026">
+<meta property="og:description" content="Historia, menú a la colombiana, muro de gratitud y tarjetas para compartir. Español / English.">
+<meta property="og:url" content="https://gracias-en-familia.netlify.app/">
+<meta property="og:image" content="https://gracias-en-familia.netlify.app/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gracias en Familia · Día de Acción de Gracias 2026">
+<meta name="twitter:description" content="Historia, menú a la colombiana, muro de gratitud y tarjetas para compartir.">
+<meta name="twitter:image" content="https://gracias-en-familia.netlify.app/og.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#inicio"><span class="brand-mark">GF</span><span data-i18n="brand">Gracias en Familia</span></a>
+  <div class="top-actions">
+    <button id="btnRefresh" class="chip" data-i18n="refresh">Actualizar</button>
+    <button id="btnLang" class="chip chip-strong" aria-label="Cambiar idioma">EN</button>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <a href="#inicio" class="tab active" data-i18n="t_home">Hoy</a>
+  <a href="#historia" class="tab" data-i18n="t_history">Historia</a>
+  <a href="#costumbres" class="tab" data-i18n="t_customs">Costumbres</a>
+  <a href="#menu" class="tab" data-i18n="t_menu">Menú</a>
+  <a href="#muro" class="tab" data-i18n="t_wall">Muro de gratitud</a>
+  <a href="#mesa" class="tab" data-i18n="t_table">Ronda en la mesa</a>
+  <a href="#tarjeta" class="tab" data-i18n="t_card">Tarjeta</a>
+  <a href="#frases" class="tab" data-i18n="t_phrases">Frases</a>
+  <a href="#ingles" class="tab" data-i18n="t_english">Inglés</a>
+</nav>
+
+<main>
+
+<!-- HOY -->
+<section id="inicio" class="hero">
+  <div class="hero-slides" id="heroSlides"></div>
+  <div class="hero-shade"></div>
+  <div class="hero-content">
+    <p class="kicker" id="todayLabel">Jueves 26 de noviembre de 2026</p>
+    <h1 data-i18n="hero_title">Hoy es día de dar gracias</h1>
+    <p class="lead" data-i18n="hero_lead">El cuarto jueves de noviembre, millones de familias se sientan a la mesa a agradecer por la cosecha, la familia y las bendiciones del año. Aquí tiene todo para vivirlo en casa.</p>
+    <div class="hero-cta">
+      <a href="#muro" class="btn btn-primary" data-i18n="cta_wall">Escribir mi agradecimiento</a>
+      <a href="#menu" class="btn btn-ghost" data-i18n="cta_menu">Ver el menú</a>
+    </div>
+    <p class="photo-credit" id="heroCredit"></p>
+  </div>
+</section>
+
+<section class="today-strip" aria-live="polite">
+  <div class="today-card">
+    <span class="today-num" id="clockNow">--:--</span>
+    <span class="today-txt" data-i18n="col_time">Hora en Colombia</span>
+  </div>
+  <div class="today-card">
+    <span class="today-num" id="countdown">--</span>
+    <span class="today-txt" id="countdownTxt">para la cena (7:00 p. m.)</span>
+  </div>
+  <div class="today-card">
+    <span class="today-num" id="wallCount">0</span>
+    <span class="today-txt" data-i18n="wall_count">agradecimientos en su muro</span>
+  </div>
+  <div class="today-card">
+    <span class="today-num" id="blackFriday">1</span>
+    <span class="today-txt" data-i18n="bf_txt">día para el Black Friday</span>
+  </div>
+</section>
+
+<section class="block">
+  <div class="block-head">
+    <h2 data-i18n="today_title">Para hoy</h2>
+    <p class="muted" data-i18n="today_sub">Una idea distinta cada vez que entra.</p>
+  </div>
+  <div class="today-grid">
+    <article class="idea-card" id="ideaOfDay"></article>
+    <article class="idea-card dark" id="questionOfDay"></article>
+    <article class="idea-card" id="wordOfDay"></article>
+  </div>
+</section>
+
+<!-- HISTORIA -->
+<section id="historia" class="block">
+  <div class="block-head">
+    <h2 data-i18n="t_history">Historia</h2>
+    <p class="muted" data-i18n="hist_sub">De una cosecha en 1621 a un festivo nacional.</p>
+  </div>
+  <ol class="timeline" id="timeline"></ol>
+  <div class="note" data-i18n="hist_note">Para el pueblo wampanoag y otros pueblos nativos la fecha también trae memoria de pérdidas: desde 1970 se conmemora ese mismo día el "Día Nacional de Luto" en Plymouth. Dar gracias también es recordar con respeto.</div>
+</section>
+
+<!-- COSTUMBRES -->
+<section id="costumbres" class="block band">
+  <div class="block-head">
+    <h2 data-i18n="t_customs">Costumbres</h2>
+    <p class="muted" data-i18n="cust_sub">Lo que pasa ese día en Estados Unidos, Canadá y en casas colombianas.</p>
+  </div>
+  <div class="cards" id="customs"></div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="block">
+  <div class="block-head">
+    <h2 data-i18n="menu_title">Menú de Acción de Gracias a la colombiana</h2>
+    <p class="muted" data-i18n="menu_sub">Con lo que se consigue en la plaza y el supermercado. Toque una receta para ver ingredientes, pasos y videos.</p>
+  </div>
+  <div class="recipes" id="recipes"></div>
+</section>
+
+<!-- MURO -->
+<section id="muro" class="block band">
+  <div class="block-head">
+    <h2 data-i18n="t_wall">Muro de gratitud</h2>
+    <p class="muted" data-i18n="wall_sub">Escriba por qué da gracias este año. Se guarda en su celular y lo puede mandar por WhatsApp.</p>
+  </div>
+  <form id="wallForm" class="wall-form">
+    <input id="wallName" maxlength="40" data-i18n-ph="ph_name" placeholder="Su nombre">
+    <textarea id="wallText" maxlength="280" rows="3" required data-i18n-ph="ph_text" placeholder="Este año doy gracias por..."></textarea>
+    <div class="row">
+      <button class="btn btn-primary" type="submit" data-i18n="add">Agregar al muro</button>
+      <button class="btn btn-ghost" type="button" id="wallShareAll" data-i18n="share_all">Compartir todo el muro</button>
+    </div>
+  </form>
+  <div class="wall" id="wall"></div>
+</section>
+
+<!-- MESA -->
+<section id="mesa" class="block">
+  <div class="block-head">
+    <h2 data-i18n="t_table">Ronda en la mesa</h2>
+    <p class="muted" data-i18n="table_sub">Pase el celular: cada uno toca y responde en voz alta antes de comer.</p>
+  </div>
+  <div class="roulette">
+    <div class="roulette-card" id="rouletteCard"><span data-i18n="table_start">Toque "Siguiente pregunta" para empezar</span></div>
+    <div class="row center">
+      <button class="btn btn-primary" id="btnNextQ" data-i18n="next_q">Siguiente pregunta</button>
+      <span class="muted" id="rouletteCount"></span>
+    </div>
+  </div>
+</section>
+
+<!-- TARJETA -->
+<section id="tarjeta" class="block band">
+  <div class="block-head">
+    <h2 data-i18n="card_title">Haga su tarjeta</h2>
+    <p class="muted" data-i18n="card_sub">Escoja una foto, escriba su mensaje y descárguela o compártala.</p>
+  </div>
+  <div class="card-maker">
+    <div class="card-controls">
+      <label data-i18n="card_to">Para</label>
+      <input id="cardTo" maxlength="40" value="Mi familia">
+      <label data-i18n="card_msg">Mensaje</label>
+      <textarea id="cardMsg" rows="3" maxlength="160">Gracias por estar, por la mesa compartida y por cada día de este año.</textarea>
+      <label data-i18n="card_from">De</label>
+      <input id="cardFrom" maxlength="40" value="Harold">
+      <label data-i18n="card_photo">Foto</label>
+      <div class="thumbs" id="cardThumbs"></div>
+      <label class="upload"><span data-i18n="card_own">O use una foto suya</span><input type="file" id="cardUpload" accept="image/*"></label>
+      <div class="row">
+        <button class="btn btn-primary" id="btnCardDownload" data-i18n="download">Descargar</button>
+        <button class="btn btn-ghost" id="btnCardShare" data-i18n="share">Compartir</button>
+      </div>
+    </div>
+    <canvas id="cardCanvas" width="1080" height="1350"></canvas>
+  </div>
+</section>
+
+<!-- FRASES -->
+<section id="frases" class="block">
+  <div class="block-head">
+    <h2 data-i18n="t_phrases">Frases para enviar</h2>
+    <p class="muted" data-i18n="phr_sub">Para la familia, los amigos, el equipo de trabajo y los clientes.</p>
+  </div>
+  <div class="filters" id="phraseFilters"></div>
+  <div class="phrases" id="phrases"></div>
+</section>
+
+<!-- INGLES -->
+<section id="ingles" class="block band">
+  <div class="block-head">
+    <h2 data-i18n="eng_title">Aprenda el inglés de Thanksgiving</h2>
+    <p class="muted" data-i18n="eng_sub">Toque cada palabra para oír cómo se pronuncia.</p>
+  </div>
+  <div class="vocab" id="vocab"></div>
+</section>
+
+<section class="block promo">
+  <div class="promo-inner">
+    <h2 data-i18n="promo_title">¿Quiere una app así para su negocio o su familia?</h2>
+    <p data-i18n="promo_txt">Vibras Positivas HM hace apps para negocios, eventos, colegios y recuerdos de familia en Caucasia y toda Colombia.</p>
+    <a class="btn btn-primary" id="promoWa" target="_blank" rel="noopener" data-i18n="promo_btn">Escribir por WhatsApp</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p><strong>Vibras Positivas HM</strong> · Harold Augusto Marín Machado · Caucasia, Antioquia · WhatsApp 311 770 0431</p>
+  <p class="muted small" data-i18n="footer_photos">Fotos reales de Wikimedia Commons, con el crédito de cada autor.</p>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

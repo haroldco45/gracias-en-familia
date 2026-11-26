@@ -1,0 +1,27 @@
+name: Imagen de vista previa (og.jpg)
+
+on:
+  push:
+    branches: [main]
+    paths: ["tools/make_og.py", ".github/workflows/og-image.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  og:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - run: python tools/make_og.py
+      - name: Guardar og.jpg en el repo
+        run: |
+          git config user.name "robot-vibras"
+          git config user.email "actions@users.noreply.github.com"
+          git add og.jpg
+          git diff --cached --quiet || (git commit -m "Imagen de vista previa con foto real" && git push)
